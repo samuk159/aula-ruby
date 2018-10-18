@@ -1,0 +1,11 @@
+task default: [:test_units]
+
+desc "Run the units test"
+task :test_units do
+    ruby "test/units/person_test.rb"
+end
+
+desc "Run the functional test"
+task :test_functionals do
+    ruby "test/functionals/person_test.rb"
+end

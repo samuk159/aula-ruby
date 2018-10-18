@@ -1,0 +1,30 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<%= link_to 'index', users_path %>
+
+<%= @user.inspect %>
+
+<p><%= @user.name %></p>
+<p><%= @user.age %></p>
+<p><%= @user.bio %></p>
+<p><%= @user.created_at %></p>
+<p><%= @user.updated_at %></p>
+<table border="1">
+    <% @user.contacts.each do |contact| %>
+        <tr>
+            <td><%= contact.name %></td>
+            <td><%= contact.birthday %></td>
+            <td><%= contact.phones.inspect %></td>
+        </tr>
+    <% end %>
+</table>
+<table border="1">
+    <% @user.phones.each do |phone| %>
+        <tr>
+            <td><%= phone.number %></td>
+            <td><%= phone.segment_phone %></td>
+            <td><%= phone.default %></td>
+        </tr>
+    <% end %>
+</table>
