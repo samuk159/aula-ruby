@@ -11,14 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+  <div class="fields">
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
 
-  <div class="field">
-    <%= f.label :birthday %><br>
-    <%= f.date_select :birthday, start_year: Date.today.year - 110, end_year: Date.today.year %>
+    <div class="field">
+      <%= f.label :birthday %><br>
+      <%= f.date_select :birthday, start_year: Date.today.year - 110, end_year: Date.today.year %>
+    </div>
+
+    <%= f.fields_for :phones do |builder| %>
+      <%= render "phone_fields", f: builder %>
+    <% end %>
+
+    <p><%= link_to_add_fields "Add Phone", f, :phones %></p>
   </div>
 
   <div class="actions">

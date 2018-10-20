@@ -1,0 +1,9 @@
+<%= javascript_include_tag "http://localhost:9292/faye/faye.js" %>
+<script>
+    $(function() {
+        var faye = new Faye.Client('http://localhost:9292/faye');
+        faye.subscribe('/test', function (data) {
+            alert(data);
+        });
+    });
+</script>
