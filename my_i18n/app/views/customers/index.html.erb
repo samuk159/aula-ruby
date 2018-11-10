@@ -1,11 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Customers</h1>
+<h1><%= t 'hello' %></h1>
+
+<h1><%= t 'listing', model: t('activerecord.models.customer') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th><%= t '.name' %></th>
+      <th>Adult</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +17,7 @@
     <% @customers.each do |customer| %>
       <tr>
         <td><%= customer.name %></td>
+        <td><%= customer.adult %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

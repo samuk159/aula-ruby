@@ -1,0 +1,13 @@
+pirate:
+  hello: 'Year'
+  listing: "Listando %{model}"
+  customers:
+    index:
+      name: Nome de pirata
+  activerecord:
+    models:
+      customer: Cliente
+    attributes:
+      customer:
+        name: "Nome"
+        adult: "Adulto"

@@ -1,0 +1,13 @@
+pt-BR:
+  hello: 'Oi'
+  listing: "Listando %{model}"
+  customers:
+    index:
+      name: Nome
+  activerecord:
+    models:
+      customer: Cliente
+    attributes:
+      customer:
+        name: "Nome"
+        adult: "Adulto"

@@ -21,3 +21,14 @@
 
 en:
   hello: "Hello world"
+  listing: "Listing %{model}"
+  customers:
+    index:
+      name: Name
+  activerecord:
+    models:
+      customer: Customer
+    attributes:
+      customer:
+        name: "Name"
+        adult: "Adult"
