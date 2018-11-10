@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  enable_sync only: [:create, :update, :destroy]
 
   # GET /users
   # GET /users.json
@@ -61,7 +62,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def faye    
+  def faye
   end
 
   private
